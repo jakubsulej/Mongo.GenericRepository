@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = OxDistributedDb.Entity
+build_property.ProjectDir = C:\Users\JakubSulej\Documents\NoSqlDAL\OxDistributedDb.Entity\

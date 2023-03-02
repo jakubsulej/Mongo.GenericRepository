@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OxDistributedDb.Core</name>
+    </assembly>
+    <members>
+        <member name="T:OxDistributedDb.Core.Abstractions.IDocument">
+            <summary>Interface to be used for every mongo entity</summary>
+        </member>
+        <member name="P:OxDistributedDb.Core.Abstractions.IDocument.Id">
+            <summary>Id as default property that every entity must have</summary>
+        </member>
+        <member name="T:OxDistributedDb.Core.Abstractions.IMongoDbSettings">
+            <summary>Object that contains database name and connection string properties</summary>
+        </member>
+        <member name="P:OxDistributedDb.Core.Abstractions.IMongoDbSettings.ConnectionString">
+            <summary>Name of the currently used database namespace</summary>
+        </member>
+        <member name="P:OxDistributedDb.Core.Abstractions.IMongoDbSettings.DatabaseName">
+            <summary>Connection string to currently set database</summary>
+        </member>
+        <member name="P:OxDistributedDb.Core.Abstractions.IMongoDbSettings.Settings">
+            <summary>MongoClientsSettings needed to connect to azure mongo cosmos</summary>
+        </member>
+        <member name="T:OxDistributedDb.Core.NoSql">
+            <summary>Inherit from it if you want to make a generic repo class</summary>
+        </member>
+        <member name="M:OxDistributedDb.Core.NoSql.Repository``1">
+            <summary>Pass generic object to register its repo in the NoSql class</summary>
+        </member>
+        <member name="M:OxDistributedDb.Core.NoSql.GetAllCollectionNamesAsync">
+            <summary>Returns all collection names in the current db namespace</summary>
+        </member>
+        <member name="T:OxDistributedDb.Core.NoSqlGenericRepository`1">
+            <summary>Contains all the methods to be used for crud operations in mongo</summary>
+        </member>
+        <member name="M:OxDistributedDb.Core.NoSqlGenericRepository`1.GetQuerable(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Returns IQuerable object, but it is a not very effective way of gather data from mongodb database.
+            </summary>
+        </member>
+        <member name="M:OxDistributedDb.Core.NoSqlGenericRepository`1.GetCollectionName(System.Type)">
+            <summary>
+            This method uses our previously prepared attribute and gets documents collection by type of document provided in parameter 
+            (ex. when we pass Person as the parameter, this method will return “people” as a result).
+            </summary>
+        </member>
+        <member name="M:OxDistributedDb.Core.NoSqlGenericRepository`1.FilterBy(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Those methods allows us to filter data by sending expressions in parameters. 
+            This works similar to LINQ, but operations are performed on database, so it’s much faster than doing it later in code-side. 
+            </summary>
+        </member>
+        <member name="M:OxDistributedDb.Core.NoSqlGenericRepository`1.FilterBy``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+            <summary>
+            those methods allows us to filter data by sending expressions in parameters. 
+            This works similar to LINQ, but operations are performed on database, so it’s much faster than doing it later in code-side. 
+            Extra parameter called projectionExpression is useful, when you want to get only some fields, rather than full objects from filtered results.
+            </summary>
+        </member>
+        <member name="M:OxDistributedDb.Core.NoSqlGenericRepository`1.FindOneAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Similar to FirstOrDefault in LINQ, gets first value that matches an expression.
+            </summary>
+        </member>
+        <member name="M:OxDistributedDb.Core.NoSqlGenericRepository`1.FindByIdAsync(System.String)">
+            <summary>
+            Similar to FirstOrDefault in LINQ, gets first value that matches an expression.
+            </summary>
+        </member>
+        <member name="M:OxDistributedDb.Core.NoSqlGenericRepository`1.InsertOneAsync(`0)">
+            <summary>
+            That method simply inserts only one record to existing database.
+            </summary>
+        </member>
+        <member name="M:OxDistributedDb.Core.NoSqlGenericRepository`1.InsertManyAsync(System.Collections.Generic.ICollection{`0})">
+            <summary>
+            That method simply inserts collection of records to existing database.
+            </summary>
+        </member>
+        <member name="M:OxDistributedDb.Core.NoSqlGenericRepository`1.ReplaceOneAsync(`0)">
+            <summary>
+            That method simply replaces a record in existing database. Can be used insted.
+            </summary>
+        </member>
+        <member name="M:OxDistributedDb.Core.NoSqlGenericRepository`1.DeleteOneAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            That method simply deletes one record from existing database.
+            </summary>
+        </member>
+        <member name="M:OxDistributedDb.Core.NoSqlGenericRepository`1.DeleteByIdAsync(System.String)">
+            <summary>
+            That method simply deletes one record by id in existing database.
+            </summary>
+        </member>
+        <member name="M:OxDistributedDb.Core.NoSqlGenericRepository`1.DeleteManyAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            That method simply deletes collection of records in existing database.
+            </summary>
+        </member>
+        <member name="T:OxDistributedDb.Core.Settings.MongoDbSettings">
+            <summary>Object that contains database name and connection string properties</summary>
+        </member>
+        <member name="P:OxDistributedDb.Core.Settings.MongoDbSettings.DatabaseName">
+            <summary>Name of the currently used database namespace</summary>
+        </member>
+        <member name="P:OxDistributedDb.Core.Settings.MongoDbSettings.ConnectionString">
+            <summary>Connection string to currently set database</summary>
+        </member>
+        <member name="P:OxDistributedDb.Core.Settings.MongoDbSettings.Settings">
+            <summary>MongoClientsSettings needed to connect to azure mongo cosmos. It is using ssl protocol Tls12</summary>
+        </member>
+    </members>
+</doc>
