@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Mongo.GenericRepository</id>
+    <version>1.0.0</version>
+    <authors>Your Name</authors>
+    <owners>Your Company</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <description>Generic MongoDB repository pattern implementation for .NET.</description>
+    <tags>MongoDB Repository DAL</tags>
+    <projectUrl>https://github.com/your-org/mongo-generic-repo</projectUrl>
+  </metadata>
+</package>
