@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 
 namespace Persistence.Infrastructure.MongoDb;
 
-internal class MongoRepository<TEntity> : IRepository<TEntity> where TEntity : class, IDocument
+public class MongoRepository<TEntity> : IRepository<TEntity> where TEntity : class, IDocument
 {
     private readonly IMongoCollection<TEntity> _collection;
 

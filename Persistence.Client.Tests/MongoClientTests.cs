@@ -30,7 +30,7 @@ public class MongoClientTests
         A.CallTo(() => _mongoDbClient.GetDatabase("FakeDb", A<MongoDatabaseSettings>._)).Returns(_fakeMongoDatabase);
 
         //Act
-        var carDocument = await _carRepository.GetByIdAsync(id, default);
+        var carDocument = await _carRepository.FirstOrDefaultAsync(x => x.Id == id, default);
 
         //Assert
         Assert.Null(carDocument);
