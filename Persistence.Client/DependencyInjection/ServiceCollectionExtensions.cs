@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using MongoDB.Driver;
 
-namespace Persistence.Infrastructure.DependencyInjection;
+namespace Persistence.Client.DependencyInjection;
 
 public static class ServiceCollectionExtensions
 {
