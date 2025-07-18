@@ -1,6 +1,6 @@
-﻿using MongoDB.Driver;
-using Persistence.Core.Models;
-using Persistence.Core.Repository;
+﻿using Core.Abstractions.Models;
+using Core.Abstractions.Repository;
+using MongoDB.Driver;
 using System.Linq.Expressions;
 
 namespace Persistence.Infrastructure.MongoDb;

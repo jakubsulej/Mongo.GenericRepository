@@ -1,7 +1,7 @@
-﻿using Persistence.Core.Models;
+﻿using Core.Abstractions.Models;
 using System.Linq.Expressions;
 
-namespace Persistence.Core.Repository;
+namespace Core.Abstractions.Repository;
 
 /// <summary>
 /// Generic repository interface for MongoDB documents.

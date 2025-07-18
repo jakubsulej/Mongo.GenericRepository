@@ -1,4 +1,4 @@
-﻿namespace Persistence.Core.Models;
+﻿namespace Core.Abstractions.Models;
 
 public interface IDocument
 {

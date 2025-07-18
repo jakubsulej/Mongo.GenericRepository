@@ -1,4 +1,4 @@
-﻿using Persistence.Core.Models;
+﻿using Core.Abstractions.Models;
 
 namespace Persistence.Client.Tests.FakeEntities;
 
