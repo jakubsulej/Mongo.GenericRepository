@@ -1,6 +1,6 @@
 ﻿using Core.Abstractions.Models;
 
-namespace Caching.InMemoryCache.Client.Tests.FakeEntities;
+namespace Caching.DistributedCache.Client.IntegrationTests.FakeEntities;
 
 public class HouseDocument : IDocument
 {

@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Caching.InMemoryCache.Clien
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests.Common", "Tests.Common\Tests.Common.csproj", "{C795CF08-5BB8-48D7-9633-AB5F91EB9D08}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Caching.DistributedCache.Client.IntegrationTests", "Caching.DistributedCache.Client.IntegrationTests\Caching.DistributedCache.Client.IntegrationTests.csproj", "{94AC387E-7C7F-49DE-A242-A5B4D87B1122}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{C795CF08-5BB8-48D7-9633-AB5F91EB9D08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C795CF08-5BB8-48D7-9633-AB5F91EB9D08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C795CF08-5BB8-48D7-9633-AB5F91EB9D08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94AC387E-7C7F-49DE-A242-A5B4D87B1122}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94AC387E-7C7F-49DE-A242-A5B4D87B1122}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94AC387E-7C7F-49DE-A242-A5B4D87B1122}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94AC387E-7C7F-49DE-A242-A5B4D87B1122}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -80,6 +86,7 @@ Global
 		{1E884779-6CC0-4C08-BA94-F77E8C298A7D} = {7D388F19-3ABC-4C06-AD12-020A27FD43AC}
 		{F3186CBD-4F0D-0369-83EC-998B62410FFD} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{C795CF08-5BB8-48D7-9633-AB5F91EB9D08} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{94AC387E-7C7F-49DE-A242-A5B4D87B1122} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A2B2D7A9-F60E-44E7-9254-78561EBD9F5C}

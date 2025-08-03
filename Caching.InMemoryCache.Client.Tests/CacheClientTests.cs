@@ -25,10 +25,9 @@ public class CacheClientTests
             NumberOfRooms = 1,
             Area = 200
         };
-        var key = $"{nameof(HouseDocument)}-{house.Id}";
 
         //Act
-        var result = await _cacheClient.GetAsync<HouseDocument>(key);
+        var result = await _cacheClient.GetAsync<HouseDocument>($"{nameof(HouseDocument)}-{house.Id}");
 
         //Assert
         Assert.Null(result);
